@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=GND Pin=SW3-0
+Removed Pin From Net: NetName=GND Pin=SW3-0
+Removed Pin From Net: NetName=GND Pin=SW3-0
+Removed Pin From Net: NetName=GND Pin=SW3-0
+Added Component: Designator=SW3(SIQ-02FVS3)
+Added Pin To Net: NetName=GND Pin=SW3-0
+Added Pin To Net: NetName=GND Pin=SW3-0
+Added Pin To Net: NetName=GND Pin=SW3-0
+Added Pin To Net: NetName=GND Pin=SW3-0
+Added Pin To Net: NetName=KEY_CH1 Pin=SW3-A
+Added Pin To Net: NetName=KEY_CH2 Pin=SW3-B
+Added Pin To Net: NetName=GND Pin=SW3-C
+Added Pin To Net: NetName=KEY_SW Pin=SW3-S

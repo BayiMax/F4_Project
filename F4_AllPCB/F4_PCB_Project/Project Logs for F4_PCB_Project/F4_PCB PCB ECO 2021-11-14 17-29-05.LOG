@@ -1,0 +1,18 @@
+Change Component Comment : Designator=C33 Old Comment=104 New Comment=0.1uF
+Change Component Comment : Designator=C36 Old Comment=104 New Comment=0.1uF
+Change Component Comment : Designator=C30 Old Comment=104 New Comment=1uF
+Change Component Comment : Designator=C31 Old Comment=104 New Comment=1uF
+Change Component Comment : Designator=C34 Old Comment=104 New Comment=2.2uF
+Change Component Comment : Designator=C32 Old Comment=104 New Comment=4.7uF
+Change Component Comment : Designator=C35 Old Comment=104 New Comment=4.7uF
+Change Component Comment : Designator=C37 Old Comment=104 New Comment=4.7uF
+Change Component Comment : Designator=C39 Old Comment=104 New Comment=105
+Change Component Comment : Designator=C41 Old Comment=104 New Comment=105
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=NetR10_2 Pin=USBC1-0
+Added Pin To Net: NetName=NetR10_2 Pin=USBC1-0
+Added Pin To Net: NetName=NetR10_2 Pin=USBC1-0
+Added Pin To Net: NetName=NetR10_2 Pin=USBC1-0

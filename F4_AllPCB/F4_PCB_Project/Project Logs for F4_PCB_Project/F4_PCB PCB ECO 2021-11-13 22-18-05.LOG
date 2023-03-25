@@ -1,0 +1,9 @@
+Change Component Footprint: Designator=JP3 Old Footprint=IDC2.54-LI-2x20P New Footprint=HDR2.54-LI-2x20P
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=NetR10_2 Pin=USBC1-0
+Added Pin To Net: NetName=NetR10_2 Pin=USBC1-0
+Added Pin To Net: NetName=NetR10_2 Pin=USBC1-0
+Added Pin To Net: NetName=NetR10_2 Pin=USBC1-0

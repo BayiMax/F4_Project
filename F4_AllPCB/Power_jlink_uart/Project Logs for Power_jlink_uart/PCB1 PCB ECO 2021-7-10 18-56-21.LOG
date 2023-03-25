@@ -1,0 +1,9 @@
+Change Component Footprint: Designator=C6 Old Footprint=C 0201_L New Footprint=C 0603_L
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=NetC27_1 Pin=USBC2-0
+Added Pin To Net: NetName=NetC27_1 Pin=USBC2-0
+Added Pin To Net: NetName=NetC27_1 Pin=USBC2-0
+Added Pin To Net: NetName=NetC27_1 Pin=USBC2-0

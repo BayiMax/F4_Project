@@ -1,0 +1,31 @@
+Change Component Footprint: Designator=JP2 Old Footprint=IDC2.54-LI-2x3P New Footprint=HDR2.54-LI-2x3P
+Change Component Footprint: Designator=R9 Old Footprint=R 0603_L New Footprint=LED 0603Y
+Change Component Footprint: Designator=R10 Old Footprint=R 0603_L New Footprint=LED 0603Y
+Change Component Footprint: Designator=R11 Old Footprint=R 0603_L New Footprint=LED 0603Y
+Change Component Footprint: Designator=JP1 Old Footprint=XH2.54-WI-4P New Footprint=HDR2.54-LI-4P
+Change Component Comment : Designator=R9 Old Comment=10K New Comment=R
+Change Component Comment : Designator=R10 Old Comment=10K New Comment=R
+Change Component Comment : Designator=R11 Old Comment=10K New Comment=R
+Change Component Designator: OldDesignator=R9 NewDesignator=LED9
+Change Component Designator: OldDesignator=R10 NewDesignator=LED10
+Change Component Designator: OldDesignator=R11 NewDesignator=LED11
+Change component parameters: Designator = "LED9"; Footprint = "LED 0603Y"; UniqueID = "\MUTKHPOF"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "贴片LED"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "封装库来自淘宝卖家 ID：黄晶宝石"; Value = "其他店铺购入均为假冒，请立即申请退款，本店奖励2~5元现金"; VariantName = "[No Variations]"
+Change component parameters: Designator = "LED10"; Footprint = "LED 0603Y"; UniqueID = "\UXKTDFXC"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "贴片LED"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "封装库来自淘宝卖家 ID：黄晶宝石"; Value = "其他店铺购入均为假冒，请立即申请退款，本店奖励2~5元现金"; VariantName = "[No Variations]"
+Change component parameters: Designator = "LED11"; Footprint = "LED 0603Y"; UniqueID = "\GNNTQJQJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "BOM名称"; Value = "贴片LED"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "封装库来自淘宝卖家 ID：黄晶宝石"; Value = "其他店铺购入均为假冒，请立即申请退款，本店奖励2~5元现金"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=NetC27_1 Pin=USBC2-0
+Added Pin To Net: NetName=NetC27_1 Pin=USBC2-0
+Added Pin To Net: NetName=NetC27_1 Pin=USBC2-0
+Added Pin To Net: NetName=NetC27_1 Pin=USBC2-0

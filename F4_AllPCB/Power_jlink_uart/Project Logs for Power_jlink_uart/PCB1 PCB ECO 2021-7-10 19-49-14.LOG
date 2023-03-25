@@ -1,0 +1,11 @@
+Change Component Footprint: Designator=C23 Old Footprint=C 0201_L New Footprint=C 0603_L
+Change Component Footprint: Designator=C24 Old Footprint=C 0201_L New Footprint=C 0603_L
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=GND Pin=USBC2-0
+Added Pin To Net: NetName=NetUSBC2_0 Pin=USBC2-0
+Added Pin To Net: NetName=NetUSBC2_0 Pin=USBC2-0
+Added Pin To Net: NetName=NetUSBC2_0 Pin=USBC2-0
+Added Pin To Net: NetName=NetUSBC2_0 Pin=USBC2-0
+Added Member To Class: ClassName=Sheet1 Member=Component JP2 Header3X2

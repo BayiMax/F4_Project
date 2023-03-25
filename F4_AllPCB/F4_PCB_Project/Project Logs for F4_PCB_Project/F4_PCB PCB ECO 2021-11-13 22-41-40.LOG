@@ -1,0 +1,9 @@
+Change Component Footprint: Designator=JP2 Old Footprint=XH2.54-WI-7P New Footprint=HDR2.54-M-LI-7P
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=GND Pin=USBC1-0
+Added Pin To Net: NetName=NetUSBC1_0 Pin=USBC1-0
+Added Pin To Net: NetName=NetUSBC1_0 Pin=USBC1-0
+Added Pin To Net: NetName=NetUSBC1_0 Pin=USBC1-0
+Added Pin To Net: NetName=NetUSBC1_0 Pin=USBC1-0

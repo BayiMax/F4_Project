@@ -1,0 +1,17 @@
+Removed Pin From Net: NetName=GND Pin=Y1-2
+Removed Pin From Net: NetName=DCMI_XCLK Pin=Y1-3
+Removed Pin From Net: NetName=OV_3.3 Pin=Y1-4
+Added Component: Designator=R51(R 0603_N)
+Add component (AddParameter): Name = "BOM名称"; Value = "贴片电阻"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "封装库来自淘宝卖家ID：黄晶宝石"; Value = "其他店铺购入均为盗版假冒封装库"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Component: Designator=X4(OSC 5032-4P)
+Add component (AddParameter): Name = "BOM名称"; Value = "4脚有源晶振"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费查找封装"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=OV_3.3 Pin=R51-1
+Added Pin To Net: NetName=GND Pin=X4-2
+Added Pin To Net: NetName=DCMI_XCLK Pin=X4-3
+Added Pin To Net: NetName=OV_3.3 Pin=X4-4
+Added Pin To Net: NetName=NetR51_2 Pin=R51-2
+Added Pin To Net: NetName=NetR51_2 Pin=X4-1
+Added Net: Name=NetR51_2
