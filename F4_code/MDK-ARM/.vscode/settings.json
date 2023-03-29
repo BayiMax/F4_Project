@@ -1,0 +1,7 @@
+{
+  "files.associations": {
+    "oled.h": "c",
+    "user.h": "c"
+  },
+  "C_Cpp.errorSquiggles": "enabled"
+}

@@ -849,11 +849,11 @@ interwork --depend=f4_code\startup_stm32f407xx.d -of4_code\startup_stm32f407xx.
 ARM Macro Assembler    Page 14 
 
 
-o -I.\RTE\_F4_code -IC:\Users\Bay_Max\Keil\pack\ARM\CMSIS\5.8.0\CMSIS\Core\Incl
-ude -IC:\Users\Bay_Max\Keil\pack\Keil\STM32F4xx_DFP\2.17.0\Drivers\CMSIS\Device
-\ST\STM32F4xx\Include --predefine="__UVISION_VERSION SETA 535" --predefine="_RT
-E_ SETA 1" --predefine="STM32F407xx SETA 1" --predefine="_RTE_ SETA 1" --list=s
-tartup_stm32f407xx.lst startup_stm32f407xx.s
+o -I../Core/Inc -I.\RTE\_F4_code -IC:\Users\Bay_Max\Keil\pack\ARM\CMSIS\5.8.0\C
+MSIS\Core\Include -IC:\Users\Bay_Max\Keil\pack\Keil\STM32F4xx_DFP\2.17.0\Driver
+s\CMSIS\Device\ST\STM32F4xx\Include --predefine="__UVISION_VERSION SETA 535" --
+predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --predefine="_RTE_ SE
+TA 1" --list=startup_stm32f407xx.lst startup_stm32f407xx.s
 
 
 

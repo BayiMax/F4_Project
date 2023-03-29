@@ -25,16 +25,24 @@ NameNetsHierarchically=0
 PowerPortNamesTakePriority=0
 AutoSheetNumbering=1
 AutoCrossReferences=0
+NewIndexingOfSheetSymbols=0
 PushECOToAnnotationFile=1
 DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
 IsProjectConflictPreventionWarningsEnabled=0
+IsVirtualBomDocumentRemoved=0
 OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
+CrossRefSheetStyle=1
+CrossRefLocationStyle=1
+CrossRefPorts=3
+CrossRefCrossSheets=1
+CrossRefSheetEntries=0
+CrossRefFollowFromMainSettings=1
 
 [Preferences]
 PrefsVaultGUID=
@@ -75,23 +83,6 @@ GenerateClassCluster=0
 DocumentUniqueId=XMNNRUUC
 
 [Document3]
-DocumentPath=..\..\OV2640\OV2640高清摄像头模块原理图及封装库 (2)\封装库\AD9\ATK-OV2640摄像头模块.IntLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document4]
 DocumentPath=PcbLib1.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -108,7 +99,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=LEIFIANH
 
-[Document5]
+[Document4]
 DocumentPath=F4_PCB.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -124,114 +115,6 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=FABCKXTB
-
-[GeneratedDocument1]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB-RoundHoles-NonPlated.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument2]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB-RoundHoles-Plated.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument3]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB-SlotHoles-Plated.TXT
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.1
-DItemRevisionGUID=
-
-[GeneratedDocument5]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.DRR
-DItemRevisionGUID=
-
-[GeneratedDocument6]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.EXTREP
-DItemRevisionGUID=
-
-[GeneratedDocument7]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GBL
-DItemRevisionGUID=
-
-[GeneratedDocument8]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GBO
-DItemRevisionGUID=
-
-[GeneratedDocument9]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GBP
-DItemRevisionGUID=
-
-[GeneratedDocument10]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GBS
-DItemRevisionGUID=
-
-[GeneratedDocument11]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GD1
-DItemRevisionGUID=
-
-[GeneratedDocument12]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GG1
-DItemRevisionGUID=
-
-[GeneratedDocument13]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GKO
-DItemRevisionGUID=
-
-[GeneratedDocument14]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GM1
-DItemRevisionGUID=
-
-[GeneratedDocument15]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GM13
-DItemRevisionGUID=
-
-[GeneratedDocument16]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GM15
-DItemRevisionGUID=
-
-[GeneratedDocument17]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GM16
-DItemRevisionGUID=
-
-[GeneratedDocument18]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GML
-DItemRevisionGUID=
-
-[GeneratedDocument19]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GPB
-DItemRevisionGUID=
-
-[GeneratedDocument20]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GPT
-DItemRevisionGUID=
-
-[GeneratedDocument21]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GTL
-DItemRevisionGUID=
-
-[GeneratedDocument22]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GTO
-DItemRevisionGUID=
-
-[GeneratedDocument23]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GTP
-DItemRevisionGUID=
-
-[GeneratedDocument24]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.GTS
-DItemRevisionGUID=
-
-[GeneratedDocument25]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.LDP
-DItemRevisionGUID=
-
-[GeneratedDocument26]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.REP
-DItemRevisionGUID=
-
-[GeneratedDocument27]
-DocumentPath=Project Outputs for F4_PCB_Project\F4_PCB.RUL
-DItemRevisionGUID=
 
 [Configuration1]
 Name=Sources
@@ -1121,6 +1004,7 @@ Type122=2
 Type123=1
 Type124=1
 Type125=1
+Type126=1
 
 [ERC Connection Matrix]
 L1=NNNNNNNNNNNWNNNWW
