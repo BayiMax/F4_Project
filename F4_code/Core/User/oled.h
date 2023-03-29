@@ -11,9 +11,8 @@
  * @copyright Copyright (c) 2023
  *
  */
-/**
- *
- */
+
+void control_init(void);
 void Oled_show_tack(void const *argument);
 
 void Oled_Refresh_tack(void const *argument);

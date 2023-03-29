@@ -90,7 +90,7 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
-
+  control_init();
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

@@ -251,8 +251,12 @@ static void fill(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2, uint8_t dot)
  */
 static void DrawLine(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2, uint8_t dot)
 {
-  uint8_t t;
-  uint16_t xerr = 0, yerr = 0, delta_x, delta_y, distance;
+  if (x1 > 128 || x2 > 128 || y1 > 32 || y2 > 32)
+  {
+    return;
+  }
+  short t;
+  short xerr = 0, yerr = 0, delta_x, delta_y, distance;
   short incx, incy, uRow, uCol;
   delta_x = x2 - x1; // 计算坐标增量
   delta_y = y2 - y1;
@@ -296,6 +300,7 @@ static void DrawLine(uint8_t x1, uint8_t y1, uint8_t x2, uint8_t y2, uint8_t dot
       uCol += incy;
     }
   }
+  return;
 }
 /**
  * @brief 画方
@@ -353,7 +358,7 @@ static void DrawCircle(uint8_t x0, uint8_t y0, uint8_t r, uint8_t dot)
  * @brief 控制结构体初始化
  *
  */
-static void control_init(void)
+void control_init(void)
 {
   oled_control.Write = I2C_Write;
   oled_control.Refresh_Gram = Refresh_Gram;
@@ -368,7 +373,6 @@ static void control_init(void)
 }
 static char oled_init(void)
 {
-  control_init();
 
   HAL_Delay(200); // 等待
 
@@ -403,112 +407,111 @@ static char oled_init(void)
 
   return 1;
 }
-/**
- * @brief 使用DSP库计算矩阵点乘
- *
- * @param a
- * @param b
- * @param out
- */
-static void matconv1(float a[3], float b[3][3], float *out)
-{
-  float res0, res1, res2, aa[3], bb0[3], bb1[3], bb2[3];
-  for (int i = 0; i < 3; i++)
-    aa[i] = a[i];
-  for (int i = 0; i < 3; i++)
-    bb0[i] = b[0][i];
-  for (int i = 0; i < 3; i++)
-    bb1[i] = b[1][i];
-  for (int i = 0; i < 3; i++)
-    bb2[i] = b[2][i];
-  arm_dot_prod_f32(aa, bb0, 3, &res0);
-  arm_dot_prod_f32(aa, bb1, 3, &res1);
-  arm_dot_prod_f32(aa, bb2, 3, &res2);
-  out[0] = res0;
-  out[1] = res1;
-  out[2] = res2;
-}
-/**
- * @brief 计算旋转矩阵并运算
- *
- * @param cube
- * @param x
- * @param y
- * @param z
- * @param cube_dis
- */
-static void rotation_matrix(float cube[8][3], float x, float y, float z, float cube_dis[8][3])
-{
-  x /= PI;
-  y /= PI;
-  z /= PI;
-  float point[8][3];
-  float p[3];
-  // 绕三个轴的旋转矩阵
-  float rz[3][3] = {{arm_cos_f32(z), -arm_sin_f32(z), 0},
-                    {arm_sin_f32(z), arm_cos_f32(z), 0},
-                    {0, 0, 1}};
-
-  float rx[3][3] = {{1, 0, 0},
-                    {0, arm_cos_f32(x), -arm_sin_f32(x)},
-                    {0, arm_sin_f32(x), arm_cos_f32(x)}};
-
-  float ry[3][3] = {{arm_cos_f32(y), 0, arm_sin_f32(y)},
-                    {0, 1, 0},
-                    {-arm_sin_f32(y), 0, arm_cos_f32(y)}};
-  for (int i = 0; i < 8; i++)
-  {
-
-    matconv1(cube[i], rx, p);
-    matconv1(p, ry, p);
-    matconv1(p, rz, p);
-    for (int j = 0; j < 3; j++)
-    {
-      point[i][j] = p[j];
-    }
-  }
-  for (int i = 0; i < 8; i++)
-  {
-    for (int j = 0; j < 3; j++)
-    {
-      cube_dis[i][j] = point[i][j];
-    }
-  }
-}
 
 void Oled_show_tack(void const *argument)
 {
-  const float XX = 0.05;
-  const float YY = 0.05;
-  const float ZZ = 0.01;
-  float box[8][3] = {{-20, -20, -20}, {-20, 20, -20}, {20, 20, -20}, {20, -20, -20}, {-20, -20, 20}, {-20, 20, 20}, {20, 20, 20}, {20, -20, 20}};
-  float box_dis[8][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
-  int lineid[24] = {1, 2, 2, 3, 3, 4, 4, 1, 5, 6, 6, 7, 7, 8, 8, 5, 8, 4, 7, 3, 6, 2, 5, 1};
 
-  float x = 0, y = 0, z = 0;
-
-  for (;;)
+  while (1)
   {
-    x = x + XX;
-    y = y + YY;
-    z = z + ZZ;                             // 每次循环叠加旋转角度
-    rotation_matrix(box, x, y, z, box_dis); // 计算旋转矩阵并运算
-    for (int i = 0; i < 24; i += 2)
-    {
-      oled_control.DrawLine(128 + box_dis[lineid[i] - 1][0], 32 + box_dis[lineid[i] - 1][1],
-                            128 + box_dis[lineid[i + 1] - 1][0], 32 + box_dis[lineid[i + 1] - 1][1], 1);
-    }
+
     osDelay(10);
   }
 }
+/**************旋转立方体******************/
+#define ANGLE_STEP 0.08
+typedef struct
+{
+  float x, y, z;
+} Vector3f;
+// 顶点坐标
+const Vector3f vertices[8] = {
+    {-0.5, -0.5, -0.5},
+    {-0.5, 0.5, -0.5},
+    {0.5, 0.5, -0.5},
+    {0.5, -0.5, -0.5},
+    {-0.5, -0.5, 0.5},
+    {-0.5, 0.5, 0.5},
+    {0.5, 0.5, 0.5},
+    {0.5, -0.5, 0.5}};
+// 面索引
+const int indices[12][2] = {
+    {0, 1}, {1, 2}, {2, 3}, {3, 0}, {4, 5}, {5, 6}, {6, 7}, {7, 4}, {0, 4}, {1, 5}, {2, 6}, {3, 7}};
 
+/**
+ * @brief 向量旋转
+ *
+ * @param v
+ * @param angle
+ * @param axis
+ */
+static void rotate(Vector3f *v, float angle, char axis)
+{
+  float s = arm_sin_f32(angle);
+  float c = arm_cos_f32(angle);
+
+  switch (axis)
+  {
+  case 'x':
+  {
+    float y = v->y * c - v->z * s;
+    float z = v->y * s + v->z * c;
+    v->y = y;
+    v->z = z;
+  }
+  break;
+
+  case 'y':
+  {
+    float x = v->x * c + v->z * s;
+    float z = -v->x * s + v->z * c;
+    v->x = x;
+    v->z = z;
+  }
+  break;
+
+  case 'z':
+  {
+    float x = v->x * c - v->y * s;
+    float y = v->x * s + v->y * c;
+    v->x = x;
+    v->y = y;
+  }
+  break;
+  }
+}
+/**
+ * @brief OLED更新显示任务
+ *
+ * @param argument 任务参数
+ */
 void Oled_Refresh_tack(void const *argument)
 {
   oled_init();
-  for (;;)
+  float angle_x = 0.0, angle_y = 0.0, angle_z = 0.0;
+  Vector3f rotated_vertices[8];
+  while (1)
   {
+    /**/
+    oled_control.fill(0, 0, 128, 32, 0);
+    for (int i = 0; i < 8; i++)
+    {
+      rotated_vertices[i] = vertices[i];
+      rotate(&rotated_vertices[i], angle_x, 'x');
+      rotate(&rotated_vertices[i], angle_y, 'y');
+      rotate(&rotated_vertices[i], angle_z, 'z');
+    }
+    for (int i = 0; i < 12; i++)
+    {
+      Vector3f v1 = rotated_vertices[indices[i][0]];
+      Vector3f v2 = rotated_vertices[indices[i][1]];
+      oled_control.DrawLine((char)(32 + v1.x * 16), (char)(16 + v1.y * 16), (char)(32 + v2.x * 16), (char)(16 + v2.y * 16), 1);
+    }
+    // 更新角度
+    angle_x += (float)ANGLE_STEP;
+    angle_y += (float)ANGLE_STEP;
+    angle_z += (float)ANGLE_STEP;
+    /**/
     oled_control.Refresh_Gram();
-    /* code */
     osDelay(16);
   }
 }

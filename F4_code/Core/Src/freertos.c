@@ -144,9 +144,9 @@ void test_tack(void const *argument)
 {
   /* USER CODE BEGIN test_tack */
   /* Infinite loop */
-  for (;;)
+  while (1)
   {
-    osDelay(100);
+    osDelay(500);
     HAL_GPIO_TogglePin(RGB_B_GPIO_Port, RGB_B_Pin);
   }
   /* USER CODE END test_tack */
